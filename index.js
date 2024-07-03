@@ -18,7 +18,7 @@ app.use("/api", router);
 app.use("/", async(req, res)=>{
   res.json({message:"Welcome to HNG Internship level 0"})
 })
-const port = 8080;
+const port = process.env.PORT | 8080;
 app.listen(port, () => {
   try {
     console.log(`App running on port ${port}`);
